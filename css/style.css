@@ -1,0 +1,267 @@
+/* Basic Resets */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromTop {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(22, 27, 34, 0.85);
+    border-bottom: 1px solid #30363d;
+    animation: slideInFromTop 0.8s ease-out forwards;
+    opacity: 0;
+    z-index: 10;
+}
+
+.header-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+}
+
+.header-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-links a:hover {
+    color: #c9d1d9;
+}
+
+/* Repository Container */
+.repo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Repository Cards */
+.repo-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    box-sizing: border-box;
+}
+
+.repo-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #58a6ff;
+}
+
+.repo-description, .repo-info span {
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.repo-description {
+    margin: 8px 0 24px;
+}
+
+.repo-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+}
+
+.repo-status {
+    background-color: transparent;
+    color: #6e7681; /* Lighter grey color */
+    padding: 2px 6px;
+    border: 1px solid #6e7681; /* Lighter grey border */
+    border-radius: 12px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.repo-status.archive {
+    background-color: transparent; /* Make the orange box not filled in */
+    color: #f0a305; /* Orange color */
+    border-color: #f0a305; /* Orange border */
+}
+
+.repo-language {
+    display: flex;
+    align-items: center;
+}
+
+.language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Particles Background */
+#particles-js {
+    background: #0d1117;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .repo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Commit Entry Styling */
+.commit-entry {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 10px 10px 30px;
+    color: #c9d1d9;
+    position: relative;
+    animation: fadeInUp 0.5s ease-out forwards;
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.commit-entry:hover {
+    background-color: #1f2a36;
+}
+
+.commit-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.commit-entry h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #58a6ff;
+}
+
+.commit-description, .commit-date {
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+    color: #8b949e;
+}
+
+.commit-status {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 3px;
+    text-align: left;
+    position: absolute;
+    bottom: 10px;
+    left: 6px;
+    margin: 0;
+}
+
+.commit-status.passed {
+    color: #28a745;
+}
+
+.commit-status.failed {
+    color: #dc3545;
+}
+
+.commit-stats {
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.commit-stats span {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    align-items: center;
+}
+
+.commit-stats i {
+    margin-left: 5px;
+}
+
+.commit-stats .fa-plus::before {
+    content: '\f067';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.commit-stats .fa-minus::before {
+    content: '\f068';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.commit-stats .fa-code-branch::before {
+    content: '\f126';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.commit-stats .fa-file-alt::before {
+    content: '\f15c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
