@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     repoCard.style.animationDelay = `${Math.floor(index / 2) * 200}ms`;
 
                     repoCard.innerHTML = `
-                        <a href="${repo.html_url}" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="${repo.html_url}" target="_blank" color: inherit;">
                             <h3>
                                 ${repo.name}
                                 <span class="repo-status ${repo.archived ? 'archive' : ''}">
