@@ -39,4 +39,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Icons by [FontAwesome](https://fontawesome.com)
 - Badges by [Shields.io](https://shields.io)
 - Hosting by [GitHub Pages](https://pages.github.com)
-- Platform by [GitHub](https://github.com)
