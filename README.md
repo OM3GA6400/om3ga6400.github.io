@@ -1,5 +1,4 @@
 # om3ga6400.github.io
-The repository for my very cool website.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -10,7 +9,7 @@ The repository for my very cool website.
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
-This repository is for my very cool website. The website is built using HTML, CSS, and JavaScript.
+The repository for my very cool website, made with HTML, CSS, and JavaScript.
 
 ## Features
 - **Responsive Design**: Works on all devices, from desktop to mobile.
