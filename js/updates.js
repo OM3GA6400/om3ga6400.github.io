@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAllCommits()
         .then(commits => {
             if (Array.isArray(commits)) {
-                // Sort commits by date in descending order (newest first)
                 commits.sort((a, b) => new Date(b.commit.author.date) - new Date(a.commit.author.date));
                 renderCommits(commits);
             } else {
